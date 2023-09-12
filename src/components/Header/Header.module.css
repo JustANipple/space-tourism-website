@@ -13,7 +13,21 @@
     border: unset;
     background-color: unset;
     padding: unset;
-    
     position: relative;
     z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        padding: 0;
+    }
+
+    .logo {
+        max-width: unset;
+        padding: 1.5rem 2.5rem;
+    }
+
+    .menu_icon {
+        display: none;
+    }
 }

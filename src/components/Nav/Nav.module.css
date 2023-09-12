@@ -44,3 +44,58 @@
     font-weight: var(--fw-bold);
     width: 1rem;
 }
+
+@media screen and (min-width: 768px) {
+    .nav {
+        position: unset;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .closed {
+        transform: scaleX(1);
+    }
+
+    .nav_options {
+        display: flex;
+        gap: 2.25rem;
+        align-items: center;
+        padding: 0 2.5rem;
+    }
+
+    .nav_options li {
+        font-size: 0.875rem;
+        padding: 0;
+    }
+
+    .nav_options span {
+        display: none;
+    }
+
+    .nav_options a {
+        padding-block: 2.5rem;
+    }
+
+    .nav_options .current {
+        border-inline-end: unset;
+        position: relative;
+        transform: scaleX(1);
+    }
+
+    .nav_options a::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 0;
+        background-color: var(--white);
+        transform: scaleX(0);
+        transition: transform .5s ease-in-out;
+    }
+
+    .nav_options .current::after {
+        transform: scaleX(1);
+        height: 0.1875rem;
+    }
+}

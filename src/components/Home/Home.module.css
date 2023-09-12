@@ -33,6 +33,7 @@
 .explore_button {
     padding-block: .75rem 0;
     padding-inline: 1.75rem;
+    margin-block-end: 4rem;
     aspect-ratio: 1/1;
     border-radius: 100vw;
     background-color: var(--white);
@@ -45,7 +46,47 @@
     font-family: var(--ff-bellefair);
     font-size: 1.25rem;
     text-transform: uppercase;
+    text-align: center;
     color: var(--explore-clr);
     line-height: 1;
     letter-spacing: 0.07813rem;
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        
+    }
+
+    .intro {
+        padding-block: 6.5rem;
+        display: grid;
+        place-content: center;
+    }
+
+    .appendix {
+        font-size: 1.25rem;
+        letter-spacing: 0.21094rem;
+    }
+
+    .title {
+        font-size: 9.375rem;
+        line-height: 9.375rem;
+        padding-block: 1.5rem;
+    }
+
+    .paragraph {
+        max-width: 54ch;
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+
+    .explore_button {
+        padding-inline: 2.75rem;
+        margin-block-end: 5.625rem;
+    }
+
+    .explore_text {
+        font-size: 2rem;
+        letter-spacing: 0.125rem;
+    }
 }
