@@ -1,7 +1,15 @@
+import { useState } from "react";
 import styles from "./Nav.module.css"
 
 // eslint-disable-next-line react/prop-types
-const Nav = ({menu}) => {
+const Nav = ({menu, setMenu, option, setOption}) => {
+
+    
+
+    function handleClick(index) {
+        setMenu(!menu);
+        setOption(index);
+    }
 
     const options = [
         {number: "00", option: "home"},
@@ -16,7 +24,12 @@ const Nav = ({menu}) => {
             {options.map((opt, index) => {
                 return (
                     <li key={index}> 
-                        <a href="#"> <span>{opt.number}</span> {opt.option}</a> 
+                        <a 
+                            href="#" 
+                            onClick={() => handleClick(index)} 
+                            className={index === option ? styles.current : ""}> 
+                            <span>{opt.number}</span> {opt.option}
+                        </a> 
                     </li>
                 )
             })}

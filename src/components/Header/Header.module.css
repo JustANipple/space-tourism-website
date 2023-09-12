@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+.logo {
+    max-width: 2.5rem;
+}
+
 .menu_icon {
     border: unset;
     background-color: unset;

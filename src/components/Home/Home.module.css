@@ -1,0 +1,51 @@
+.main {
+    display: grid;
+    row-gap: 3.5rem;
+}
+
+.intro {
+    padding-block: 1.5rem;
+    text-align: center;
+}
+
+.appendix {
+    font-family: var(--ff-barlow-cond);
+    text-transform: uppercase;
+    color: var(--par-clr);
+    letter-spacing: 0.16875rem;
+}
+
+.title {
+    font-family: var(--ff-bellefair);
+    font-size: 5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-family: var(--ff-barlow);
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    color: var(--par-clr);
+    padding-inline: 1.375rem;
+}
+
+.explore_button {
+    padding-block: .75rem 0;
+    padding-inline: 1.75rem;
+    aspect-ratio: 1/1;
+    border-radius: 100vw;
+    background-color: var(--white);
+    border: unset;
+    max-width: fit-content;
+    margin-inline: auto;
+}
+
+.explore_text {
+    font-family: var(--ff-bellefair);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: var(--explore-clr);
+    line-height: 1;
+    letter-spacing: 0.07813rem;
+}

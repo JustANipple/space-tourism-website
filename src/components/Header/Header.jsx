@@ -12,7 +12,8 @@ const Header = ({menu, setMenu, logoSource, hamburgerSource, closeSource, childr
         <header className={styles.header}>
             <img 
                 src={logoSource}
-                alt="logo" 
+                alt="logo"
+                className={styles.logo}
             />
             <button 
                 className={styles.menu_icon}
