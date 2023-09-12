@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap');
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+/* === Custom properties === */
+:root {
+  /* == Colors == */
+  --explore-clr: hsl(230, 35%, 7%);
+  --num-clr: hsl(231, 15%, 26%);
+  --par-clr: hsl(231, 77%, 90%);
+  --white: hsl(0, 0%, 100%);
+
+  /* == Fonts == */
+  --ff-barlow: 'Barlow', sans-serif;
+  --ff-barlow-cond: 'Barlow Condensed', sans-serif;
+  --ff-bellefair: 'Bellefair', serif;
+  --fw-reg: 400;
+  --fw-bold: 700;
+
+  /* = Font size = */
+  --fs-h-one: 9.375rem;
+  --fs-h-two: 6.25rem;
+  --fs-h-three: 3.5rem;
+  --fs-h-four: 2rem;
+  --fs-h-five: 1.75rem; /* 4.75px char space */
+  --fs-sub-one: 1.75rem;
+  --fs-sub-two: 0.875rem; /* 2.35px char space */
+  --fs-nav: 1rem; /* 2.7px char space */
+}

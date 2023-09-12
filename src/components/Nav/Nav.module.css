@@ -1,0 +1,45 @@
+.nav {
+    font-family: var(--ff-barlow-cond);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.75px);
+    transition: all .5s ease-in-out;
+    transform-origin: top;
+}
+
+.closed {
+    transform: scaleY(0);
+}
+
+.nav_options {
+    list-style: none;
+    padding: 7.35rem 0;
+    display: grid;
+    row-gap: 2rem;
+}
+
+.nav_options li {
+    text-transform: uppercase;
+    letter-spacing: 0.16875rem;
+    padding-inline: 2rem 0;
+}
+
+.nav_options li a {
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav_options li:nth-child(1) {
+    border-inline-end: .25rem solid;
+}
+
+.nav_options li span {
+    font-weight: var(--fw-bold);
+    width: 1rem;
+}

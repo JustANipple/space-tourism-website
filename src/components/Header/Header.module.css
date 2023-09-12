@@ -1,0 +1,15 @@
+.header {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_icon {
+    border: unset;
+    background-color: unset;
+    padding: unset;
+    
+    position: relative;
+    z-index: 1;
+}

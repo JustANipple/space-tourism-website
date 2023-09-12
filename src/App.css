@@ -1,0 +1,24 @@
+html, body {
+    min-height: 100vh;
+    color-scheme: dark;
+}
+
+body {
+    background-color: var(--explore-clr);
+    background-image: url("src/assets/home/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url("src/assets/home/background-home-tablet.jpg");
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-image: url("src/assets/home/background-home-desktop.jpg");
+    }
+}
