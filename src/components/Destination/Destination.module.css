@@ -1,0 +1,10 @@
+.appendix {
+    font-family: var(--ff-barlow-cond);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.16875rem;
+}
+
+.appendix span {
+    color: var(--num-clr);
+}

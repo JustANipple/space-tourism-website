@@ -6,13 +6,53 @@ const Destination = ({data}) => {
 
     const [planet, setPlanet] = useState(0);
 
+    function handleClick(index) {
+      setPlanet(index);
+    }
+
   return (
-    <main>
-        <p> <span>01</span> pick your destination</p>
-        <picture>
+    <main className={styles.main}>
+        <p className={styles.appendix}> <span>01</span> pick your destination</p>
+        <picture className={styles.picture}>
+            {/* eslint-disable-next-line react/prop-types */}
             <source srcSet={data.destinations[planet].images.webp}/>
+            {/* eslint-disable-next-line react/prop-types */}
             <img src={data.destinations[planet].images.png} alt="planet image" />
         </picture>
+        <div className={styles.content}>
+          <ul className={styles.list}>
+            {/* eslint-disable-next-line react/prop-types */}
+            {data.destinations.map((dest, index) => {
+              return (
+                <li key={index} className={planet === index ? styles.current : ""}>
+                  <a 
+                    href="#"
+                    onClick={() => handleClick(index)}
+                  >
+                    {dest.name}
+                  </a> 
+                </li>
+              )
+            })}
+          </ul>
+          {/* eslint-disable-next-line react/prop-types */}
+          <h1 className={styles.title}>{data.destinations[planet].name}</h1>
+          {/* eslint-disable-next-line react/prop-types */}
+          <p className={styles.paragraph}>{data.destinations[planet].description}</p>
+          <hr />
+          <div className={styles.stats}>
+            <div className={styles.distance}>
+              <p className={styles.distance_appendix}>Avg. distance</p>
+              {/* eslint-disable-next-line react/prop-types */}
+              <p className={styles.distance_value}>{data.destinations[planet].distance}</p>
+            </div>
+            <div className={styles.time}>
+            <p className={styles.time_appendix}>Est travel time</p>
+              {/* eslint-disable-next-line react/prop-types */}
+              <p className={styles.time_value}>{data.destinations[planet].travel}</p>
+            </div>
+          </div>
+        </div>
     </main>
   )
 }
