@@ -5,7 +5,6 @@ html, body {
 
 body {
     background-color: var(--explore-clr);
-    background-image: url("src/assets/home/background-home-mobile.jpg");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
