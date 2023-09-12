@@ -3,6 +3,8 @@ import './App.css'
 import Header from './components/Header/Header'
 import Nav from './components/Nav/Nav'
 import Home from './components/Home/Home';
+import data from "../public/data.json"
+import Destination from './components/Destination/Destination';
 
 function App() {
 
@@ -25,7 +27,11 @@ function App() {
           setOption={setOption}
         />
       </Header>
-      <Home />
+      {option === 0 ? <Home /> : ""}
+      <Destination 
+        data={data}
+      />
+      
     </>
   )
 }

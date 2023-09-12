@@ -15,6 +15,7 @@ const Header = ({menu, setMenu, logoSource, hamburgerSource, closeSource, childr
                 alt="logo"
                 className={styles.logo}
             />
+            <hr />
             <button 
                 className={styles.menu_icon}
                 onClick={handleClick}    

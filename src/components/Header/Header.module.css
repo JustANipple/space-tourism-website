@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+.header hr {
+    display: none;
+}
+
 .logo {
     max-width: 2.5rem;
 }
@@ -24,10 +28,33 @@
 
     .logo {
         max-width: unset;
-        padding: 1.5rem 2.5rem;
+        padding: 0 2.125rem 0 2.5rem;
     }
 
     .menu_icon {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header hr {
+        display: block;
+        border-top: none;
+        border-color: var(--num-clr);
+        width: 100%;
+        margin-inline-start: auto;
+        transform: translateX(1.875rem);
+        position: relative;
+        z-index: 10;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        padding-block: 2.625rem;
+    }
+
+    .logo {
+        padding-inline-start: 3.5rem;
     }
 }

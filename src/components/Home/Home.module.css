@@ -4,6 +4,8 @@
 }
 
 .intro {
+    display: grid;
+    place-content: center;
     padding-block: 1.5rem;
     text-align: center;
 }
@@ -25,6 +27,7 @@
 .paragraph {
     font-family: var(--ff-barlow);
     font-size: 0.9375rem;
+    max-width: 54ch;
     line-height: 1.5625rem;
     color: var(--par-clr);
     padding-inline: 1.375rem;
@@ -53,14 +56,8 @@
 }
 
 @media screen and (min-width: 768px) {
-    .main {
-        
-    }
-
     .intro {
         padding-block: 6.5rem;
-        display: grid;
-        place-content: center;
     }
 
     .appendix {
@@ -75,7 +72,6 @@
     }
 
     .paragraph {
-        max-width: 54ch;
         font-size: 1rem;
         line-height: 1.75rem;
     }
@@ -88,5 +84,56 @@
     .explore_text {
         font-size: 2rem;
         letter-spacing: 0.125rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 10rem;
+    }
+
+    .intro {
+        padding-block: 15.625rem 0;
+        text-align: left;
+    }
+
+    .appendix {
+        font-size: 1.75rem;
+        letter-spacing: 0.29531rem;
+    }
+
+    .paragraph {
+        padding: 0;
+        font-size: 1.125rem;
+        line-height: 2rem;
+        max-width: 45ch;
+    }
+
+    .explore_button {
+        padding-inline: 4rem;
+        margin: 0;
+        margin-block-start: auto;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .explore_button::after {
+        position: absolute;
+        content: "";
+        border-radius: 100vw;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 0 0 5rem rgba(255, 255, 255, 0.1036);
+        transform: scale(0);
+        transition: all .25s ease-out;
+    }
+
+    .explore_button:hover::after {
+        transform: scale(1);
     }
 }

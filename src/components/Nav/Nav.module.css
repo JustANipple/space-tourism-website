@@ -99,3 +99,25 @@
         height: 0.1875rem;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .nav_options {
+        padding-inline: 7.75rem 10rem;
+    }
+
+    .nav_options span {
+        display: inline-flex;
+    }
+
+    .nav_options a:not(.current):hover::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 0.1875rem;
+        transform: scaleX(1);
+        background-color: var(--white);
+        opacity: 50%;
+    }
+}
