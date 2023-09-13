@@ -1,14 +1,12 @@
-import { useState } from "react";
 import styles from "./Nav.module.css"
 
 // eslint-disable-next-line react/prop-types
-const Nav = ({menu, setMenu, option, setOption}) => {
-
-    
+const Nav = ({menu, setMenu, option, setOption, setBackground}) => {    
 
     function handleClick(index) {
         setMenu(!menu);
         setOption(index);
+        setBackground(index);
     }
 
     const options = [

@@ -10,6 +10,7 @@ import Destination from './components/Destination/Destination';
 
 function App() {
 
+  /* Setting body background based on the page and the window width */
   const backgrounds = [
     {
       name: "home",
@@ -25,15 +26,26 @@ function App() {
     },
     {
       name: "technology",
-      bgs: ["background-crew-mobile.jpg", "background-crew-tablet.jpg", "background-crew-desktop.jpg"]
+      bgs: ["background-technology-mobile.jpg", "background-technology-tablet.jpg", "background-technology-desktop.jpg"]
     },
   ]
 
+  const [background, setBackground] = useState(0);
+
+  const windowWidth = window.innerWidth;
+  let currentBackground;
+  if(windowWidth < 768) {
+    currentBackground = backgrounds[background].bgs[0];
+  } else if (windowWidth < 1024) {
+    currentBackground = backgrounds[background].bgs[1];
+  } else {
+    currentBackground = backgrounds[background].bgs[2];
+  }
+  
+  document.body.style.backgroundImage = `url(src/assets/${backgrounds[background].name}/${currentBackground})`;
+
   const [menu, setMenu] = useState(false);
   const [option, setOption] = useState(0);
-  const [background, setBackground] = useState()
-  
-  document.body.style.backgroundImage = "url(src/assets/home/background-home-mobile.jpg)";
 
   return (
     <>
@@ -49,12 +61,11 @@ function App() {
           setMenu={setMenu}
           option={option}
           setOption={setOption}
+          setBackground={setBackground}
         />
       </Header>
       {option === 0 ? <Home /> : ""}
-      <Destination 
-        data={data}
-      />
+      {option === 1 ? <Destination data={data} /> : ""}
       
     </>
   )
