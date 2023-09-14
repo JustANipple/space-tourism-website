@@ -1,0 +1,193 @@
+.main {
+    padding-inline: 1.5rem;
+    display: grid;
+    place-items: center;
+}
+
+.appendix {
+    font-family: var(--ff-barlow-cond);
+    text-transform: uppercase;
+    letter-spacing: 0.16875rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.appendix span {
+    font-weight: var(--fw-bold);
+    opacity: .25;
+}
+
+.picture img {
+    height: 13.875rem;
+    padding-block-start: 2rem;
+}
+
+hr {
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid var(--num-clr);
+}
+
+.content {
+    display: grid;
+    justify-items: center;
+    padding-block-end: 2rem;
+}
+
+.selectors {
+    padding-block: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.selectors button {
+    aspect-ratio: 1/1;
+    border-radius: 100vw;
+    border: none;
+    background-color: var(--num-clr);
+}
+
+.selectors .current {
+    background-color: var(--white);
+}
+
+.info {
+    display: grid;
+    text-align: center;
+}
+
+.role {
+    font-family: var(--ff-bellefair);
+    opacity: 0.4951;
+    text-transform: uppercase;
+}
+
+.name {
+    font-family: var(--ff-bellefair);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: var(--fw-reg);
+    padding-block-end: 1rem;
+}
+
+.bio {
+    font-family: var(--ff-barlow);
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    color: var(--par-clr);
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        padding-block-start: 2rem;
+        padding-inline-start: 2.5rem;
+    }
+
+    .appendix {
+        margin-inline-end: auto;
+        font-size: 1.25rem;
+        letter-spacing: 0.21094rem;
+        grid-row: 1;
+    }
+
+    .picture img {
+        height: 35.75rem;
+        padding-block-start: unset;
+        grid-row: 3;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .content {
+        padding-block: 3.75rem 0;
+        grid-row: 2;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .role {
+        font-size: 1.5rem;
+        opacity: 0.4994;
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .bio {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        max-width: 51ch;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        padding-inline: 10.25rem;
+        grid-template-columns: 1.25fr 1fr;
+        grid-template-areas: 
+        "appendix picture"
+        "content picture";
+        place-items: flex-start;
+    }
+
+    .appendix,
+    .picture img,
+    .content {
+        grid-row: unset;
+    }
+
+    .appendix {
+        font-size: 1.75rem;
+        letter-spacing: 0.29531rem;
+        grid-area: appendix;
+    }
+
+    .picture {
+        grid-area: picture;
+        margin-block-start: auto;
+        margin-inline-start: auto;
+    }
+
+    .picture img {
+        max-height: unset;
+        height: unset;
+        margin: 0;
+    }
+
+    .content {
+        padding: 0;
+        margin-block-start: 9.5rem;
+        grid-area: content;
+        place-items: start;
+    }
+
+    .selectors {
+        margin-block-start: 7.5rem;
+    }
+
+    .selectors button {
+        width: 0.9375rem;
+    }
+
+    .info {
+        text-align: start;
+    }
+
+    .role {
+        font-size: 2rem;
+    }
+
+    .name {
+        font-size: 3.5rem;
+    }
+
+    .bio {
+        font-size: 1.125rem;
+        line-height: 2rem;
+        max-width: 28rem;
+    }
+}

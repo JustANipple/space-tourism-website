@@ -5,6 +5,7 @@ import Nav from './components/Nav/Nav'
 import Home from './components/Home/Home';
 import data from "../public/data.json"
 import Destination from './components/Destination/Destination';
+import Crew from './components/Crew/Crew';
 
 
 
@@ -66,6 +67,7 @@ function App() {
       </Header>
       {option === 0 ? <Home /> : ""}
       {option === 1 ? <Destination data={data} /> : ""}
+      {option === 2 ? <Crew  data={data} /> : ""}
       
     </>
   )

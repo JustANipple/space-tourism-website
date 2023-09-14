@@ -15,7 +15,7 @@
 }
 
 .appendix span {
-    color: var(--num-clr);
+    opacity: .25;
     font-weight: var(--fw-bold);
 }
 
@@ -152,6 +152,57 @@ hr {
 
     .stats {
         display: flex;
-        gap: 6.25rem;
+        gap: clamp(1rem, -11.9231rem + 20.1923vw, 6.25rem);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        grid-template-areas: 
+        "appendix appendix"
+        "picture content";
+        padding-inline: 10.5rem;
+        row-gap: 3.5rem;
+        column-gap: 3.25rem;
+    }
+
+    .appendix {
+        font-size: 1.75rem;
+        letter-spacing: 0.29531rem;
+        grid-area: appendix;
+    }
+
+    .picture {
+        grid-area: picture;
+        max-width: unset;
+        width: clamp(18.75rem, -4.0192rem + 35.5769vw, 28rem);
+        margin-inline: clamp(0rem, -9.8462rem + 15.3846vw, 4rem);;
+    }
+
+    .content {
+        grid-area: content;
+        align-items: flex-start;
+    }
+
+    .title {
+        font-size: 6.25rem;
+        padding-inline: 0;
+    }
+
+    .paragraph {
+        text-align: start;
+        font-size: 1.125rem;
+        line-height: 2rem;
+        max-width: 28rem;
+    }
+
+    .stats {
+        text-align: start;
+    }
+
+    .distance_value,
+    .time_value {
+        font-family: var(--ff-bellefair);
+        font-size: 1.75rem;
     }
 }
