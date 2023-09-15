@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import data from "../public/data.json"
 import Destination from './components/Destination/Destination';
 import Crew from './components/Crew/Crew';
+import Technology from './components/Technology/Technology';
 
 
 
@@ -68,6 +69,7 @@ function App() {
       {option === 0 ? <Home /> : ""}
       {option === 1 ? <Destination data={data} /> : ""}
       {option === 2 ? <Crew  data={data} /> : ""}
+      {option === 3 ? <Technology data={data} /> : ""}
       
     </>
   )

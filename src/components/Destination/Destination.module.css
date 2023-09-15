@@ -161,6 +161,7 @@ hr {
         grid-template-areas: 
         "appendix appendix"
         "picture content";
+        padding-block-end: 0;
         padding-inline: 10.5rem;
         row-gap: 3.5rem;
         column-gap: 3.25rem;
