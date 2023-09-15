@@ -66,11 +66,10 @@ function App() {
           setBackground={setBackground}
         />
       </Header>
-      {option === 0 ? <Home /> : ""}
+      {option === 0 ? <Home setOption={setOption}/> : ""}
       {option === 1 ? <Destination data={data} /> : ""}
       {option === 2 ? <Crew  data={data} /> : ""}
       {option === 3 ? <Technology data={data} /> : ""}
-      
     </>
   )
 }
