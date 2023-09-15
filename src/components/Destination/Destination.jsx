@@ -1,5 +1,6 @@
 import { useState } from "react"
 import styles from "./Destination.module.css"
+import { motion } from "framer-motion"
 
 // eslint-disable-next-line react/prop-types
 const Destination = ({data}) => {
@@ -12,14 +13,28 @@ const Destination = ({data}) => {
 
   return (
     <main className={styles.main}>
-        <p className={styles.appendix}> <span>01</span> pick your destination</p>
-        <picture className={styles.picture}>
+        <motion.p 
+          className={styles.appendix}
+          animate={{ opacity: [0, 1] }}
+          transition={{ duration: 1 }}
+        > 
+          <span>01</span> pick your destination
+        </motion.p>
+        <motion.picture 
+          className={styles.picture}
+          animate={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ duration: 1 }}
+        >
             {/* eslint-disable-next-line react/prop-types */}
             <source srcSet={data.destinations[planet].images.webp}/>
             {/* eslint-disable-next-line react/prop-types */}
             <img src={data.destinations[planet].images.png} alt="planet image" />
-        </picture>
-        <div className={styles.content}>
+        </motion.picture>
+        <motion.div 
+          className={styles.content}
+          animate={{ x: [100, 0], opacity: [0, 1] }}
+          transition={{ duration: 1 }}
+        >
           <ul className={styles.list}>
             {/* eslint-disable-next-line react/prop-types */}
             {data.destinations.map((dest, index) => {
@@ -52,7 +67,7 @@ const Destination = ({data}) => {
               <p className={styles.time_value}>{data.destinations[planet].travel}</p>
             </div>
           </div>
-        </div>
+        </motion.div>
     </main>
   )
 }
