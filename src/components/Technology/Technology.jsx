@@ -18,7 +18,7 @@ const Technology = ({data}) => {
                     <source 
                         // eslint-disable-next-line react/prop-types
                         srcSet={data.technology[technology].images.portrait}
-                        media="min-width(768px)"
+                        media="(min-width: 1024px)"
                     />
                     <img 
                         // eslint-disable-next-line react/prop-types

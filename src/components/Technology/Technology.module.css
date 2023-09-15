@@ -20,10 +20,11 @@
 
 .wrapper {
     display: grid;
+    place-items: center;
     row-gap: 2rem;
 }
 
-/* .picture {} */
+/* .picture img {} */
 
 .content {
     display: grid;
@@ -82,4 +83,121 @@
     color: var(--par-clr);
     font-size: .9375rem;
     line-height: 1.5625rem;
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        padding-block: 2.5rem;
+        row-gap: 3.75rem;
+    }
+
+    .appendix {
+        padding-inline: 2.25rem;
+        margin-inline-end: auto;
+        letter-spacing: 0.21094rem;
+        font-size: 1.25rem;
+    }
+
+    .wrapper {
+        row-gap: 3.375rem;
+    }
+
+    .content {
+        row-gap: 2.75rem;
+    }
+
+    .selectors button {
+        width: 3.75rem;
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        letter-spacing: 0.16875rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .description {
+        font-size: 1;
+        line-height: 1.75rem;
+        max-width: 49ch;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        padding-block: 4.75rem;
+        row-gap: 1.5rem;
+    }
+
+    .appendix {
+        gap: 1.5rem;
+        padding-inline: 10.25rem;
+        letter-spacing: 0.29531rem;
+        font-size: 1.75rem;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .picture {
+        flex: 1;
+    }
+
+    .picture img {
+        margin-inline-start: auto;
+    }
+
+    .content {
+        display: flex;
+        flex: 1.5;
+        justify-content: center;
+        width: 100%;
+        text-align: left;
+        gap: clamp(1rem, -8.8462rem + 15.3846vw, 5rem);
+    }
+
+    .selectors {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .selectors button {
+        width: 5rem;
+        font-size: 2rem;
+    }
+
+    .terminology {
+        padding: 0;
+    }
+    
+    .title {
+        font-size: 3.5rem;
+    }
+    
+    .description {
+        margin-block-end: 0;
+        font-size: 1.125rem;
+        line-height: 2rem;
+        max-width: 45ch;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .wrapper {
+        gap: clamp(1rem, -13.7692rem + 23.0769vw, 7rem);
+    }
+
+    .picture img {
+        margin-inline-start: unset;
+    }
 }
