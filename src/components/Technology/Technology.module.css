@@ -135,7 +135,7 @@
 
     .appendix {
         gap: 1.5rem;
-        padding-inline: 10.25rem;
+        padding-inline: clamp(1rem, -21.7692rem + 35.5769vw, 10.25rem);
         letter-spacing: 0.29531rem;
         font-size: 1.75rem;
     }
@@ -156,9 +156,9 @@
     }
 
     .content {
+        padding-inline-start: clamp(1rem, -21.7692rem + 35.5769vw, 10.25rem);
         display: flex;
         flex: 1.5;
-        justify-content: center;
         width: 100%;
         text-align: left;
         gap: clamp(1rem, -8.8462rem + 15.3846vw, 5rem);
@@ -174,6 +174,11 @@
     .selectors button {
         width: 5rem;
         font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .selectors button:not(.current):hover {
+        border: 1px solid rgba(255, 255, 255);
     }
 
     .terminology {
@@ -188,7 +193,7 @@
         margin-block-end: 0;
         font-size: 1.125rem;
         line-height: 2rem;
-        max-width: 45ch;
+        max-width: 47ch;
     }
 }
 

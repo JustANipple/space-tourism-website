@@ -180,6 +180,27 @@ hr {
         margin-inline: clamp(0rem, -9.8462rem + 15.3846vw, 4rem);;
     }
 
+    .list li {
+        position: relative;
+    }
+
+    .list li::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 0.1875rem;
+        transform: scaleX(0);
+        background-color: var(--white);
+        opacity: 50%;
+    }
+
+    .list li:not(.current):hover::after {
+        transform: scaleX(1);
+        transition: all .5s ease-in-out;
+    }
+
     .content {
         grid-area: content;
         align-items: flex-start;
@@ -206,4 +227,6 @@ hr {
         font-family: var(--ff-bellefair);
         font-size: 1.75rem;
     }
+
+
 }

@@ -44,11 +44,12 @@ hr {
     aspect-ratio: 1/1;
     border-radius: 100vw;
     border: none;
-    background-color: var(--num-clr);
+    background-color: var(--white);
+    opacity: .25;
 }
 
 .selectors .current {
-    background-color: var(--white);
+    opacity: 1;
 }
 
 .info {
@@ -171,7 +172,13 @@ hr {
 
     .selectors button {
         width: 0.9375rem;
+        cursor: pointer;
+        transition: opacity .5s ease-in-out;
     }
+
+    .selectors button:not(.current):hover {
+        opacity: .50;
+    }   
 
     .info {
         text-align: start;
