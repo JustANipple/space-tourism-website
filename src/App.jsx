@@ -8,8 +8,6 @@ import Destination from './components/Destination/Destination';
 import Crew from './components/Crew/Crew';
 import Technology from './components/Technology/Technology';
 
-
-
 function App() {
 
   /* Setting body background based on the page and the window width */
