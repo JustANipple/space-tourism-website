@@ -1,5 +1,6 @@
 import { useState } from "react"
 import styles from "./Crew.module.css"
+import { motion } from "framer-motion"
 
 // eslint-disable-next-line react/prop-types
 const Crew = ({data}) => {
@@ -12,15 +13,28 @@ const Crew = ({data}) => {
 
   return (
     <main className={styles.main}>
-        <p className={styles.appendix}> <span>02</span> meet your crew</p>
-        <picture className={styles.picture}>
+        <motion.p 
+            className={styles.appendix}
+            animate={{ opacity: [0, 1] }}
+            transition={{ duration: 1 }}            
+        > <span>02</span> meet your crew
+        </motion.p>
+        <motion.picture 
+            className={styles.picture}
+            animate={{ x: [100, 0], opacity: [0, 1] }}
+            transition={{ duration: 1 }}
+        >
             {/* eslint-disable-next-line react/prop-types */}
             <source srcSet={data.crew[crew].images.webp}/>
             {/* eslint-disable-next-line react/prop-types */}
             <img src={data.crew[crew].images.png} alt="crew image"/>
-        </picture>
-        <hr />
-        <div className={styles.content}>
+        </motion.picture>
+        <hr className={styles.divisor}/>
+        <motion.div 
+            className={styles.content}
+            animate={{ x: [-100, 0], opacity: [0, 1] }}
+            transition={{ duration: 1 }}
+        >
             <div className={styles.selectors}>
                 {/* eslint-disable-next-line react/prop-types */}
                 {data.crew.map((member, index) => {
@@ -42,7 +56,7 @@ const Crew = ({data}) => {
                 {/* eslint-disable-next-line react/prop-types */}
                 <p className={styles.bio}>{data.crew[crew].bio}</p>
             </div>
-        </div>
+        </motion.div>
     </main>
   )
 }

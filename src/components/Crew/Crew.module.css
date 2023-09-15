@@ -22,10 +22,11 @@
     padding-block-start: 2rem;
 }
 
-hr {
+.divisor {
     margin: 0;
     border: none;
     border-bottom: 1px solid var(--num-clr);
+    width: 100%;
 }
 
 .content {
@@ -97,7 +98,7 @@ hr {
         grid-row: 3;
     }
 
-    hr {
+    .divisor {
         display: none;
     }
 

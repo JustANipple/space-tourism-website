@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-.header hr {
+.header .divisor {
     display: none;
 }
 
@@ -37,7 +37,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .header hr {
+    .header .divisor {
         display: block;
         border-top: none;
         border-color: var(--num-clr);

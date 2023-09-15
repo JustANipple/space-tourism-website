@@ -20,7 +20,7 @@ const Destination = ({data}) => {
         > 
           <span>01</span> pick your destination
         </motion.p>
-        <motion.picture 
+        <motion.picture
           className={styles.picture}
           animate={{ x: [-100, 0], opacity: [0, 1] }}
           transition={{ duration: 1 }}
@@ -54,7 +54,7 @@ const Destination = ({data}) => {
           <h1 className={styles.title}>{data.destinations[planet].name}</h1>
           {/* eslint-disable-next-line react/prop-types */}
           <p className={styles.paragraph}>{data.destinations[planet].description}</p>
-          <hr />
+          <hr className={styles.divisor}/>
           <div className={styles.stats}>
             <div className={styles.distance}>
               <p className={styles.distance_appendix}>Avg. distance</p>

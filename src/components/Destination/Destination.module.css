@@ -74,10 +74,11 @@
     max-width: 35rem;
 }
 
-hr {
+.divisor {
     margin-block: 2rem;
     width: 100%;
     border-color: var(--num-clr);
+    border-top: none;
 }
 
 .stats {
@@ -146,7 +147,7 @@ hr {
         line-height: 1.75rem;
     }
 
-    hr {
+    .divisor {
         margin-block: 3rem ;
     }
 
