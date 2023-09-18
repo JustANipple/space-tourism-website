@@ -150,7 +150,7 @@
 
     .picture {
         grid-area: picture;
-        margin-block-start: auto;
+        margin-block: auto;
         margin-inline-start: auto;
     }
 

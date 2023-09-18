@@ -178,7 +178,8 @@
         grid-area: picture;
         max-width: unset;
         width: clamp(18.75rem, -4.0192rem + 35.5769vw, 28rem);
-        margin-inline: clamp(0rem, -9.8462rem + 15.3846vw, 4rem);;
+        margin-block: auto;
+        margin-inline: clamp(0rem, -9.8462rem + 15.3846vw, 4rem);
     }
 
     .list li {
