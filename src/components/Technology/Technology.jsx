@@ -23,7 +23,7 @@ const Technology = ({data}) => {
             <div className={styles.wrapper}>
                 <motion.picture 
                     className={styles.picture}
-                    animate={{ x: [100, 0], opacity: [0, 1] }}
+                    animate={{ y: [-100, 0], opacity: [0, 1] }}
                     transition={{ duration: 1 }}
                 >
                     <source 
