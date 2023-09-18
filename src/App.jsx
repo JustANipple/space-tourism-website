@@ -42,7 +42,7 @@ function App() {
     currentBackground = backgrounds[background].bgs[2];
   }
   
-  document.body.style.backgroundImage = `url(src/assets/${backgrounds[background].name}/${currentBackground})`;
+  document.body.style.backgroundImage = `url(images/${backgrounds[background].name}/${currentBackground})`;
 
   const [menu, setMenu] = useState(false);
   const [option, setOption] = useState(0);
