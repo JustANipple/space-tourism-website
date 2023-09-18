@@ -3,7 +3,7 @@ import './App.css'
 import Header from './components/Header/Header'
 import Nav from './components/Nav/Nav'
 import Home from './components/Home/Home';
-import data from "../public/data.json"
+import data from "./data.json"
 import Destination from './components/Destination/Destination';
 import Crew from './components/Crew/Crew';
 import Technology from './components/Technology/Technology';
