@@ -50,9 +50,9 @@ function App() {
   return (
     <>
       <Header 
-        logoSource="src/assets/shared/logo.svg"
-        hamburgerSource="src/assets/shared/icon-hamburger.svg"
-        closeSource="src/assets/shared/icon-close.svg"
+        logoSource="images/shared/logo.svg"
+        hamburgerSource="images/shared/icon-hamburger.svg"
+        closeSource="images/shared/icon-close.svg"
         menu={menu}
         setMenu={setMenu}
       >
